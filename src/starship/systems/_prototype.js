@@ -20,6 +20,10 @@ class system{
         this.status = value;
     }
 
+    getLevel(){
+        return this.level;
+    }
+
     readLevel(){
         ui.log(`${this.name} level ${this.level} Captain`);
     }

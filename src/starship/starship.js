@@ -31,7 +31,15 @@ class starship {
     }
 
     attack(enemyShip){
-        
+        if(this.weapons.getLevel() < 1){
+            ui.log("No weapons available");
+        }
+        else if(this.weapons.getStatus() < 1){
+            ui.log("Weapons Offline");
+        }
+        else{
+            
+        }
     }
 
     
