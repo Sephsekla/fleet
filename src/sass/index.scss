@@ -11,7 +11,24 @@
         height: 100%;
         width: 0;
 
-        background-color: red;
         transition: 0.1s;
+    }
+
+    &.shields{
+        span{
+            background-color: lightblue;
+        }
+    }
+
+    &.hull{
+        span{
+            background-color: yellow;
+        }
+    }
+
+    &.engines{
+        span{
+            background-color: orange;
+        }
     }
 }
