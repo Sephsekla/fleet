@@ -1,10 +1,12 @@
+import $ from 'jquery';
+
 class ui{
     constructor(){
 
     }
 
-    static setShieldBar(){
-        
+    static setShieldBar(percent){
+        $('#shields span').css('width',`${percent}%`);
     }
 }
 

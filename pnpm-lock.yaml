@@ -2,6 +2,7 @@ dependencies:
   compass-mixins: 0.12.10
   html-webpack-plugin: 3.2.0_webpack@4.42.0
   ifdef-loader: 2.1.5
+  jquery: 3.4.1
   normalize.css: 8.0.1
   save: 2.4.0
 devDependencies:
@@ -2907,6 +2908,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
+  /jquery/3.4.1:
+    dev: false
+    resolution:
+      integrity: sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
   /js-base64/2.5.2:
     dev: true
     resolution:
@@ -5767,6 +5772,7 @@ specifiers:
   html-webpack-plugin: ^3.2.0
   ifdef-loader: ^2.1.4
   imports-loader: ^0.7.1
+  jquery: ^3.4.1
   mini-css-extract-plugin: ^0.4.5
   node-sass: ^4.13.1
   normalize.css: ^8.0.1
