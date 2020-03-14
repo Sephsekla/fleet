@@ -25,6 +25,9 @@ class ui{
     static log(content){
         document.getElementById('log').innerHTML += `<br>${content}`;
 
+        var objDiv = document.getElementById("log");
+        objDiv.scrollTop = objDiv.scrollHeight;
+
     }
 
 
