@@ -13,7 +13,7 @@ class shields{
 
         this.status = value;
         this.getStatus();
-        ui.setShieldStatus(value);
+        ui.setShieldBar(value);
     }
 }
 
