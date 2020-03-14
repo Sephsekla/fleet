@@ -1,5 +1,4 @@
 import systems from './systems/systems';
-import ui from '../ui/ui';
 
 
 class starship{
@@ -11,7 +10,7 @@ class starship{
     }
 
     hail(){
-        alert(`This is the Starship ${this.name}`);
+        console.log(`This is the Starship ${this.name}`);
     }
 
     report(){

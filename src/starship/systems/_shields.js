@@ -4,7 +4,7 @@ class shields{
     }
 
     getStatus(){
-        alert(`Shields at ${this.status}% Captain`);
+        console.log(`Shields at ${this.status}% Captain`);
     }
 
     setStatus(value){
