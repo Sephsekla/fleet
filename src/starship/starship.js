@@ -1,4 +1,4 @@
-import systems from '../systems/systems';
+import systems from './systems/systems';
 
 
 class starship{
