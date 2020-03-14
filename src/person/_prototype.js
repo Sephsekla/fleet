@@ -2,7 +2,7 @@ class npc{
     constructor(name,rank){
         this.name = name;
         this.rank = rank;
-        this.assignment = ' - currently unassigned';
+        this.assignment = '- currently unassigned';
     }
 
     identify(){
@@ -12,7 +12,7 @@ class npc{
     assign(ship){
         this.ship = ship;
 
-        this.assignment = ` of the Starship ${this.ship.name}`
+        this.assignment = `of the Starship ${this.ship.name}`
     }
 }
 
