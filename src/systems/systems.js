@@ -1,14 +1,3 @@
-class starship{
+import shields from './_shields';
 
-
-    constructor(){
-        this.name = 'Test Ship'
-    }
-
-    hail(){
-        alert(`This is the Starship ${this.name}`);
-    }
-}
-
-
-export default starship;
+export default {shields};
