@@ -67,7 +67,21 @@ module.exports = {
   plugins: [
     extractSass,
     extractAdmin,
-      new HtmlWebpackPlugin()
+      new HtmlWebpackPlugin({
+        template: 'index.ejs',
+        templateParameters: (compilation, assets, assetTags, options) => {
+          return {
+            compilation,
+            webpackConfig: compilation.options,
+            htmlWebpackPlugin: {
+              tags: assetTags,
+              files: assets,
+              options
+            },
+            'foo': 'Fleet'
+          };
+        },
+      })
 
   ],
   output: {
