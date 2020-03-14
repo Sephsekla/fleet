@@ -1,9 +1,10 @@
 import ui from 'UI/ui';
 
 class system{
-    constructor(){
+    constructor(level){
         this.status = 100;
         this.name = 'System Name';
+        this.level = level;
     }
 
     getStatus(){
@@ -17,6 +18,10 @@ class system{
     setStatus(value){
 
         this.status = value;
+    }
+
+    readLevel(){
+        ui.log(`${this.name} level ${this.level} Captain`);
     }
 
 }

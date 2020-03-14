@@ -5,11 +5,11 @@ import ui from 'UI/ui';
 class starship {
 
 
-    constructor(name) {
+    constructor(name,s = 1,h = 1,e = 1) {
         this.name = name;
-        this.shields = new systems.shields;
-        this.hull = new systems.hull;
-        this.engines = new systems.engines;
+        this.shields = new systems.shields(s);
+        this.hull = new systems.hull(h);
+        this.engines = new systems.engines(e);
     }
 
     hail() {
@@ -18,6 +18,12 @@ class starship {
 
     report(){
         ui.log("Our scans cannot penetrate their shields");
+    }
+
+    reportSystems(){
+        this.shields.readLevel();
+        this.hull.readLevel();
+        this.engines.readLevel();
     }
 
     

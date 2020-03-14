@@ -2,8 +2,8 @@ import system from './_prototype';
 
 class shields extends system{
 
-    constructor(){
-        super(status);
+    constructor(level){
+        super(level);
         this.name = 'Shields';
     }
 

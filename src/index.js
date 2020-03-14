@@ -18,6 +18,7 @@ myShip.hail();
 myShip.shields.setStatus(80);
 myShip.report();
 
-let enemyShip = new ship.starship("LXS Destroyer");
+let enemyShip = new ship.starship("LXS Destroyer",1,1,2);
 enemyShip.hail();
 enemyShip.report();
+enemyShip.reportSystems();
