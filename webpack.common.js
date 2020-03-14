@@ -55,7 +55,9 @@ module.exports = {
 
   resolve: {
     alias: {
-      assets: path.resolve(__dirname, '../dist/assets'),
+      assets: path.resolve(__dirname, 'dist/assets'),
+      UI: path.resolve(__dirname, 'src/ui'),
+      
     },
   },
 
