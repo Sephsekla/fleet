@@ -16,12 +16,11 @@ class starship {
         ui.log(`This is the Starship ${this.name}`);
     }
 
-    report() {
-        this.shields.readStatus();
-        this.hull.readStatus();
-        this.engines.readStatus();
-        this.updateUI();
+    report(){
+        ui.log("Our scans cannot penetrate their shields");
     }
+
+    
 }
 
 class playerShip extends starship {
@@ -31,6 +30,13 @@ class playerShip extends starship {
         ui.setHullBar(this.hull.getStatus());
         ui.setEngineBar(this.engines.getStatus());
 
+    }
+
+    report() {
+        this.shields.readStatus();
+        this.hull.readStatus();
+        this.engines.readStatus();
+        this.updateUI();
     }
 }
 
