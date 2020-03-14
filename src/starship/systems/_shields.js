@@ -1,4 +1,3 @@
-import ui from 'UI/ui';
 import system from './_prototype';
 
 class shields extends system{
@@ -8,12 +7,7 @@ class shields extends system{
         this.name = 'Shields';
     }
 
-    setStatus(value){
-
-        this.status = value;
-        this.getStatus();
-        ui.setShieldBar(value);
-    }
+   
 }
 
 export default shields;

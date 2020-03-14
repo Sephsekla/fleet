@@ -1,4 +1,5 @@
 import systems from './systems/systems';
+import ui from 'UI/ui';
 
 
 class starship{
@@ -14,7 +15,12 @@ class starship{
     }
 
     report(){
-        this.shields.getStatus();
+        this.shields.readStatus();
+        this.updateUI();
+    }
+
+    updateUI(){
+            ui.setShieldBar(this.shields.getStatus());
     }
 }
 
