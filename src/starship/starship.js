@@ -13,7 +13,7 @@ class starship{
     }
 
     hail(){
-        console.log(`This is the Starship ${this.name}`);
+        ui.log(`This is the Starship ${this.name}`);
     }
 
     report(){

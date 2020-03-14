@@ -18,6 +18,11 @@ class ui{
         this.setBar('engines',percent)
     }
 
+    static log(content){
+        document.getElementById('log').innerHTML += `<br>${content}`;
+
+    }
+
 
 }
 

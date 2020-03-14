@@ -1,3 +1,5 @@
+import ui from 'UI/ui';
+
 class npc{
     constructor(name,rank){
         this.name = name;
@@ -6,7 +8,7 @@ class npc{
     }
 
     identify(){
-        console.log(`${this.rank} ${this.name} ${this.assignment}`)
+        ui.log(`${this.rank} ${this.name} ${this.assignment}`)
     }
 
     assign(ship){

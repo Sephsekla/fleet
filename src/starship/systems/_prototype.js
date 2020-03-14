@@ -1,3 +1,5 @@
+import ui from 'UI/ui';
+
 class system{
     constructor(){
         this.status = 100;
@@ -9,7 +11,7 @@ class system{
     }
 
     readStatus(){
-        console.log(`${this.name} at ${this.status}% Captain`);
+        ui.log(`${this.name} at ${this.status}% Captain`);
     }
 
     setStatus(value){
