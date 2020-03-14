@@ -3,6 +3,9 @@ const path = require('path');
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+
 const autoprefixer = require('autoprefixer');
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -63,7 +66,9 @@ module.exports = {
   },
   plugins: [
     extractSass,
-    extractAdmin
+    extractAdmin,
+      new HtmlWebpackPlugin()
+
   ],
   output: {
     filename: '[name].js',
