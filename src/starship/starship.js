@@ -22,6 +22,9 @@ class starship {
         this.engines.readStatus();
         this.updateUI();
     }
+}
+
+class playerShip extends starship {
 
     updateUI() {
         ui.setShieldBar(this.shields.getStatus());
@@ -29,10 +32,6 @@ class starship {
         ui.setEngineBar(this.engines.getStatus());
 
     }
-}
-
-class playerShip extends starship {
-
 }
 
 
