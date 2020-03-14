@@ -2,34 +2,41 @@ import systems from './systems/systems';
 import ui from 'UI/ui';
 
 
-class starship{
+class starship {
 
 
-    constructor(name){
+    constructor(name) {
         this.name = name;
         this.shields = new systems.shields;
         this.hull = new systems.hull;
         this.engines = new systems.engines;
     }
 
-    hail(){
+    hail() {
         ui.log(`This is the Starship ${this.name}`);
     }
 
-    report(){
+    report() {
         this.shields.readStatus();
         this.hull.readStatus();
         this.engines.readStatus();
         this.updateUI();
     }
 
-    updateUI(){
-            ui.setShieldBar(this.shields.getStatus());
-            ui.setHullBar(this.hull.getStatus());
-            ui.setEngineBar(this.engines.getStatus());
+    updateUI() {
+        ui.setShieldBar(this.shields.getStatus());
+        ui.setHullBar(this.hull.getStatus());
+        ui.setEngineBar(this.engines.getStatus());
 
     }
 }
 
+class playerShip extends starship {
 
-export default starship;
+}
+
+
+export {
+    starship,
+    playerShip
+};

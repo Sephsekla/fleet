@@ -1,19 +1,19 @@
 import './sass/index.scss';
 
-import starship from "./starship/starship";
+import * as ship from "./starship/starship";
 
 import * as person from "./person/person";
 
-let ship = new starship('SS Enterprise');
+let myShip = new ship.playerShip('SS Enterprise');
 
-let player = new person.player("Jean-Luc Picard");
+let pc = new person.player("Jean-Luc Picard");
 
-player.identify();
+pc.identify();
 
-player.assign(ship);
+pc.assign(myShip);
 
-player.identify();
+pc.identify();
 
-ship.hail();
-ship.shields.setStatus(80);
-ship.report();
+myShip.hail();
+myShip.shields.setStatus(80);
+myShip.report();
