@@ -1,12 +1,11 @@
 import ui from 'UI/ui';
+import system from './_prototype';
 
-class shields{
+class shields extends system{
+
     constructor(){
-        this.status = 100;
-    }
-
-    getStatus(){
-        console.log(`Shields at ${this.status}% Captain`);
+        super(status);
+        this.name = 'Shields';
     }
 
     setStatus(value){
