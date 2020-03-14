@@ -5,11 +5,12 @@ import ui from 'UI/ui';
 class starship {
 
 
-    constructor(name,s = 1,h = 1,e = 1) {
+    constructor(name,s = 0,h = 1,e = 1, w = 0) {
         this.name = name;
         this.shields = new systems.shields(s);
         this.hull = new systems.hull(h);
         this.engines = new systems.engines(e);
+        this.weapons = new systems.weapons(w);
     }
 
     hail() {
@@ -21,9 +22,16 @@ class starship {
     }
 
     reportSystems(){
+        ui.log(`------Systems Report------`)
         this.shields.readLevel();
         this.hull.readLevel();
         this.engines.readLevel();
+        this.weapons.readLevel();
+        ui.log(`--------------------------`);
+    }
+
+    attack(enemyShip){
+        
     }
 
     
@@ -35,14 +43,18 @@ class playerShip extends starship {
         ui.setShieldBar(this.shields.getStatus());
         ui.setHullBar(this.hull.getStatus());
         ui.setEngineBar(this.engines.getStatus());
+        ui.setWeaponBar(this.weapons.getStatus());
 
     }
 
     report() {
+        ui.log(`------Systems Status------`)
         this.shields.readStatus();
         this.hull.readStatus();
         this.engines.readStatus();
+        this.weapons.readStatus();
         this.updateUI();
+        ui.log(`--------------------------`);
     }
 }
 

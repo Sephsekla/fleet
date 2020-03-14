@@ -18,6 +18,10 @@ class ui{
         this.setBar('engines',percent)
     }
 
+    static setWeaponBar(percent){
+        this.setBar('weapons',percent);
+    }
+
     static log(content){
         document.getElementById('log').innerHTML += `<br>${content}`;
 
